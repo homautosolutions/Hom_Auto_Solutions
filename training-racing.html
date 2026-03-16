@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Racing | H.O.M Auto Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+        }
+
+        .split-content {
+            padding: 6rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .split-image {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+        .feature-list li::before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--racing-red);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .split-section {
+                grid-template-columns: 1fr;
+            }
+            .split-image {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+
+    <div class="page-hero reveal" style="background-image: url('images/tm.webp');">
+        <div class="page-hero-content">
+            <h1 class="heading-xl text-white">Beyond the Showroom</h1>
+            <p style="font-size: 1.25rem; color: #aaa; max-width: 600px; margin: 1.5rem auto 0;">Connecting riders through professional off-road training clinics and national championship racing support.</p>
+        </div>
+    </div>
+
+    <!-- Training Section -->
+    <section class="split-section">
+        <div class="split-content reveal" style="background-color: var(--matte-black);">
+            <p style="color: var(--racing-red); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">Off-Road Academy</p>
+            <h2 class="section-title" style="text-align: left;">Trailmaster Off-Road Training</h2>
+            <p style="color: #aaa; font-size: 1.1rem; margin-top: 1.5rem; line-height: 1.8;">
+                Master the dirt with our specialized off-road clinics. Whether you're taking your adventure bike off the tarmac for the first time or looking to refine your sliding techniques, our certified instructors provide the foundation you need.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Off-Road Clinic for Beginners</strong> - Learn the fundamentals of balance, clutch control, and body positioning on loose surfaces.</li>
+                <li><strong>Full Day Training Session (8 Hours)</strong> - Intensive practical sessions focusing on obstacle clearance and hill climbs.</li>
+                <li><strong>Level 1 – Off-Road Adventure Training</strong> - Advanced drills tailored for heavy adventure motorcycles.</li>
+            </ul>
+            <div style="margin-top: 2rem;">
+                <a href="contact.html" class="btn btn-primary">Book a Session</a>
+            </div>
+        </div>
+        <div class="split-image" style="background-image: url('images/tm.webp');"></div>
+    </section>
+
+    <!-- Racing Section -->
+    <section class="split-section">
+        <div class="split-image" style="background-image: url('images/Isbkpit.jpg');"></div>
+        <div class="split-content reveal" style="background-color: var(--carbon-grey);">
+            <p style="color: var(--racing-red); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">Motorsport Heritage</p>
+            <h2 class="section-title" style="text-align: left;">ISBK Racing Team</h2>
+            <p style="color: #aaa; font-size: 1.1rem; margin-top: 1.5rem; line-height: 1.8;">
+                Racing is in our blood. H.O.M Auto Solutions proudly supports elite professional riders competing fiercely in the Indian National Motorcycle Racing Championship (INMRC).
+            </p>
+            <p style="color: #aaa; font-size: 1.1rem; margin-top: 1rem; line-height: 1.8;">
+                Our track presence isn't just about branding—it's about rigorous product testing. The helmets and suits our athletes wear on Sunday are the very models available in our stores on Monday. We gather invaluable feedback at extreme speeds to ensure the gear we distribute offers uncompromised performance and safety.
+            </p>
+            <div style="margin-top: 3rem;">
+                <a href="brands.html" class="btn btn-outline">Shop Race Gear</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

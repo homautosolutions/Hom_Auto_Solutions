@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Motorcycle Helmets & Riding Gear India | H.O.M Auto Solutions</title>
+  <meta name="description"
+    content="Official distributors of KYT helmets, Alpinestars gear, and premium motorcycle equipment in India.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Exact Screenshot Clone Sections */
+
+    /* 1. Hero / Store Image */
+    .sc-hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background: url('images/lalbagh.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sc-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      /* Overlay */
+    }
+
+    .sc-hero-logo {
+      position: relative;
+      z-index: 2;
+      width: clamp(200px, 40vw, 400px);
+      animation: fadeIn 1s ease-out;
+    }
+
+    /* 2. Brand Statement */
+    .sc-brand-statement {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background: url('images/HP.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-top: 4px solid #0884d4;
+      /* Small border matching image if needed, or omit. I'll omit to keep it clean, or use blue as seen in screenshot? Wait, blue border in screenshot 2? No, that's just the selection box of the screenshot tool. */
+    }
+
+    .sc-brand-statement::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.795);
+    }
+
+    .sc-brand-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+      width: 100%;
+    }
+
+    .sc-brand-content h2 {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      color: var(--pure-white);
+      line-height: 1.1;
+      margin-bottom: 4rem;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .sc-brand-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .sc-brand-logos img {
+      height: clamp(40px, 8vw, 80px);
+      object-fit: contain;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+    }
+
+    /* 3. Split Features */
+    .sc-split {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .sc-split-half {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sc-split-half::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.475);
+      backdrop-filter: blur(3px);
+    }
+
+    /* Since the images themselves have the logos burned in, we just set the background */
+    .sc-item-link {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+
+    .sc-item-logo {
+      width: clamp(150px, 20vw, 300px);
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+    }
+
+    .sc-item-link:hover .sc-item-logo {
+      transform: scale(1.1);
+    }
+
+    .sc-item-text {
+      font-family: 'Bebas Neue', cursive;
+      font-size: clamp(2rem, 5vw, 4rem);
+      color: var(--pure-white);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
+      border: 2px solid var(--pure-white);
+      transition: all 0.4s ease;
+    }
+
+    .sc-item-link:hover .sc-item-text {
+      background: var(--pure-white);
+      color: var(--matte-black);
+      transform: scale(1.05);
+    }
+
+    .sc-split-half:hover::before {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+
+
+
+    @media (max-width: 768px) {
+      .sc-split {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .sc-split-half {
+        height: 50vh;
+      }
+
+      .sc-brand-logos {
+        gap: 2rem;
+      }
+    }
+
+    /* Light Theme Below Sections */
+    .light-divider {
+      text-align: center;
+      padding: 4rem 0 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header-placeholder"></div>
+
+
+  <!-- SECTION 1: HERO (From Screenshot 1) -->
+  <section class="sc-hero">
+    <img src="images/hom_logo.png" alt="House of Machines" class="sc-hero-logo">
+  </section>
+
+  <!-- SECTION 2: BRAND STATEMENT (From Screenshot 2) -->
+  <section class="sc-brand-statement">
+    <div class="container sc-brand-content reveal">
+      <h2>OFFICIAL DISTRIBUTORS<br>OF PREMIUM RIDING<br>GEARS IN INDIA</h2>
+
+      <div class="sc-brand-logos">
+        <img src="images/kyt.png" alt="KYT">
+        <img src="images/ALPINESTARS-WHT (1).png" alt="Alpinestars">
+        <img src="images/suomylogo.png" alt="Suomy">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SPLIT FEATURES (From Screenshot 3) -->
+  <section class="sc-split reveal">
+    <div class="sc-split-half" style="background-image: url('images/tm.webp');">
+      <a href="https://trailmaster.in/" target="_blank" class="sc-item-link">
+        <img style="filter: invert();" src="images/trail-master-logo.webp" alt="Trail Master" class="sc-item-logo">
+      </a>
+    </div>
+    <div class="sc-split-half" style="background-image: url('images/Isbkpit.jpg');">
+      <a href="https://isbkracing.com/" target="_blank" class="sc-item-link">
+        <img src="images/isbk-logo.webp" alt="ISBK Racing" class="sc-item-logo">
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 4: IMPORTED BRANDS (White Background) -->
+  <section class="premium-white-section section-padding reveal" style="background-color: var(--pure-white);">
+    <div class="container">
+      <div
+        style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 1rem;">
+        <h2 class="section-title" style="margin: 0; text-align: left;">Imported Brands</h2>
+        <a href="brands.html" class="arrow-link"
+          style="color: var(--matte-black); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">View All
+          Models &rarr;</a>
+      </div>
+
+      <div class="sleek-brands-grid">
+        <div class="sleek-brand-card">
+          <div
+            style="height: 120px; display: flex; align-items: center; justify-content: flex-start; margin-bottom: 2rem;">
+            <!-- Since KYT logo is already black, remove filters so it shows properly on white -->
+            <img src="images/kyt.png" alt="KYT" style="height: 60px;">
+          </div>
+          <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">KYT
+            Helmets</h4>
+          <p style="color: var(--grey-text); margin-bottom: 2rem;">World Class Protection</p>
+          <a target="_blank" href="https://houseofmachines.in/collections/kyt" class="arrow-link minimalist-link">Shop
+            Now
+            <span>&rarr;</span></a>
+        </div>
+
+        <div class="sleek-brand-card">
+          <div
+            style="height: 120px; display: flex; align-items: center; justify-content: flex-start; margin-bottom: 2rem;">
+            <!-- ALPINESTARS WHT is white, so invert it to black -->
+            <img src="images/ALPINESTARS-WHT (1).png" alt="Alpinestars" style="height: 60px; filter: invert(1);">
+          </div>
+          <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+            Alpinestars</h4>
+          <p style="color: var(--grey-text); margin-bottom: 2rem;">High Performance Racing Gear</p>
+          <a target="_blank" href="https://houseofmachines.in/collections/alpinestars"
+            class="arrow-link minimalist-link">Shop Now
+            <span>&rarr;</span></a>
+        </div>
+
+        <div class="sleek-brand-card">
+          <div
+            style="height: 120px; display: flex; align-items: center; justify-content: flex-start; margin-bottom: 2rem;">
+            <!-- Suomy logo is already black, remove filters -->
+            <img src="images/suomylogo.png" alt="Suomy" style="height: 60px;">
+          </div>
+          <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Suomy
+          </h4>
+          <p style="color: var(--grey-text); margin-bottom: 2rem;">Italian Aerodynamics</p>
+          <a href="#" class="arrow-link minimalist-link">Coming Soon <span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: PRODUCT SHOWCASE (Dark Background) -->
+  <section class="premium-dark-section reveal" style="background-color: var(--matte-black); color: var(--pure-white);">
+    <div class="showcase-container">
+      <div class="showcase-image" style="background-image: url('images/R1R.png');"></div>
+      <div class="showcase-content">
+        <div style="max-width: 500px;">
+          <p
+            style="color: var(--racing-red); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">
+            Featured Model</p>
+          <h2 class="heading-lg text-white" style="margin-bottom: 1rem;">R1R</h2>
+          <p style="color: #aaaaaa; font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.5rem;">Uncompromising track
+            performance tailored for the street. Experience our latest drop of MotoGP certified protection gear,
+            engineered to push the boundaries of aerodynamics and safety.</p>
+          <a href="brands.html" class="btn btn-outline-white" style="padding: 1rem 3rem;">Build Yours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHT THEME REMAINDER SECTIONS -->
+  <div class="light-divider container reveal" style="text-align: center; padding: 6rem 0 2rem;">
+    <h2 class="heading-lg">Discover <span class="text-red">Your Gear</span></h2>
+  </div>
+
+  <section class="container reveal" style="padding-bottom: 6rem;">
+    <div class="discover-grid">
+
+      <!-- KYT Discover Card -->
+      <div class="discover-card">
+        <div class="discover-bg" style="background-image: url('images/kyt-ecom.jpg');"></div>
+        <div class="discover-overlay"></div>
+        <div class="discover-content">
+          <div class="discover-text">
+            <h3 style=" color: #ccc; font-size: 2rem;">KYT Helmets</h3>
+            <p style="color: #ccc; font-size: 0.9rem;">MotoGP Performance</p>
+          </div>
+          <a target="_blank" href="https://houseofmachines.in/collections/kyt">&rarr;</a>
+        </div>
+      </div>
+
+      <!-- Alpinestars Discover Card -->
+      <div class="discover-card">
+        <!-- User mentioned they will add specific product photos later. Using existing placeholders -->
+        <div class="discover-bg" style="background-image: url('images/alpinestar-ecom.webp');"></div>
+        <div class="discover-overlay"></div>
+        <div class="discover-content">
+          <div class="discover-text">
+            <h3 style=" color: #ccc; font-size: 2rem;">Alpinestars</h3>
+            <p style=" color: #ccc; font-size: 0.9rem;">Track-Ready Suits</p>
+          </div>
+          <a target="_blank" href="https://houseofmachines.in/collections/alpinestars">&rarr;</a>
+        </div>
+      </div>
+
+      <!-- Suomy Discover Card -->
+      <div class="discover-card">
+        <div class="discover-bg" style="background-image: url('images/suomy-ecom.jpg');"></div>
+        <div class="discover-overlay"></div>
+        <div class="discover-content">
+          <div class="discover-text">
+            <h3 style=" color: #ccc; font-size: 2rem;">Suomy</h3>
+            <p style="color: #ccc; font-size: 0.9rem;">Aerodynamic Design</p>
+          </div>
+          <a href="#">&rarr;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Shop Now Button Link to E-Comm -->
+    <div style="text-align: center; margin-top: 4rem;">
+      <a target="_blank" href="https://houseofmachines.in" class="btn btn-primary" style="padding: 1rem 3rem;">Shop
+        Now</a>
+      <!-- <p style="color: var(--grey-text); font-size: 0.9rem; margin-top: 1rem;">Directs to official HOM E-Commerce
+        platform</p> -->
+    </div>
+  </section>
+
+  <!-- SECTION 6: DEALER NETWORK (Map Grid) -->
+  <section class="dealer-map-section section-padding reveal">
+    <div class="container" style="text-align: center; margin-bottom: 3rem;">
+      <h2 class="heading-lg" style="color: var(--matte-black);">Find Your Dealer</h2>
+    </div>
+    <div class="dealer-map-container">
+      <div class="dealer-map-left">
+        <!-- Placeholder for map image; user will likely supply specific map screenshot later -->
+        <img src="images/India-locator-map.jpg" alt="India Dealer Map"
+          style="border-radius: 8px; max-height: 400px; object-fit: cover;">
+      </div>
+      <div class="dealer-stats-grid">
+        <div class="dealer-stat-box">
+          <h4>150+ Active<br>Dealers</h4>
+        </div>
+        <div class="dealer-stat-box">
+          <h4>25+ States<br>Covered</h4>
+        </div>
+        <div class="dealer-stat-box">
+          <h4>50+Major<br>Cities</h4>
+        </div>
+        <div class="dealer-stat-box">
+          <h4>50000+<br>Riders<br>Protected</h4>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 4rem;">
+      <a target="_blank" href="https://kytindia.com/store-locator" class="btn btn-primary">Locate Center</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
