@@ -5,72 +5,353 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dealer Network | H.O.M Auto Solutions</title>
     <link rel="stylesheet" href="styles.css">
-</head><body style="background-color: var(--pure-white); color: var(--matte-black);">
+</head>
+
+<body style="background-color: var(--pure-white); color: var(--matte-black);">
 
     <div id="header-placeholder"></div>
 
-
-    <!-- Hero Section -->
-    <div class="page-hero reveal" style="background-image: url('images/HP.jpg');">
+    <div class="page-hero reveal" style="background-image: url('images/brand_alpinestars.jpg');">
         <div class="page-hero-content">
-            <h1 class="heading-xl text-white">Nationwide Dealer Network</h1>
-            <p style="font-size: 1.25rem; color: #aaa; max-width: 600px; margin: 1.5rem auto 0;">Find premium motorcycle safety gear at over 150 authorized dealerships across India.</p>
+            <div class="brand-logo-strip">
+                <img src="images/ALPINESTARS-WHT (1).png" alt="Alpinestars" class="brand-logo brand-logo-white">
+                <img src="images/kyt.png" alt="KYT" class="brand-logo brand-logo-kyt">
+            </div>
+            <h1 class="heading-xl text-white" style="margin-bottom: 1rem;">Dealer Network</h1>
+            <p>Choose your brand and explore authorized dealer locations across India, state by state.</p>
         </div>
     </div>
 
-    <!-- Dealer Map Section from Homepage -->
-    <section class="dealer-map-section section-padding reveal" style="background-color: var(--pure-white);">
-        <div class="container" style="text-align: center; margin-bottom: 4rem;">
-            <h2 class="section-title">Locate Your Nearest Dealer</h2>
-            <div style="width: 50px; height: 3px; background: var(--racing-red); margin: 1.5rem auto 0;"></div>
-            
-            <div style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; position: relative;">
-                <input type="text" placeholder="Enter City or Pincode" style="padding: 1rem 2rem; width: 100%; font-size: 1.1rem; border: 1px solid var(--border-color); border-radius: 4px; background: #FAFAFA; color: var(--matte-black); outline: none;">
-                <button class="btn btn-primary" style="position: absolute; right: 0; top: 0; bottom: 0; border-radius: 0 4px 4px 0;">Search</button>
-            </div>
-        </div>
+    <section class="container intro-section reveal" style="padding-top: 4rem; padding-bottom: 2rem; text-align: center;">
+        <h2 class="section-title">Authorized Dealer Network</h2>
+        <div style="width: 50px; height: 3px; background: var(--racing-red); margin: 0 auto 2rem;"></div>
+        <p style="font-size: 1.05rem; color: var(--grey-text); max-width: 900px; margin: 0 auto; line-height: 1.8;">
+            Explore premium motorcycle gear partners across India. Alpinestars listings are live, while KYT dealers are currently being finalized and will appear here soon.
+        </p>
+    </section>
 
+    <section class="section-padding reveal" style="background: #f7f7f7;">
         <div class="container">
-            <div class="dealer-map-container">
-                <div class="dealer-map-left">
-                    <div style="background: rgba(0,0,0,0.7); padding: 2rem; border-radius: 8px; text-align: center; color: white;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
-                        <h3 class="heading-md">Interactive Map</h3>
-                        <p style="color: #aaa;">Coming Soon</p>
-                    </div>
+            <div class="brand-filter-bar">
+                <div class="brand-tab-list" role="tablist" aria-label="Dealer brand switcher">
+                    <button class="brand-tab active" data-brand="alpinestars" role="tab" aria-selected="true" aria-controls="alpinestars-panel">Alpinestars</button>
+                    <button class="brand-tab" data-brand="kyt" role="tab" aria-selected="false" aria-controls="kyt-panel">KYT</button>
                 </div>
-                <div class="dealer-stats-grid">
-                    <div class="dealer-stat-box">
-                        <h4 class="text-red" style="font-family: 'Bebas Neue', cursive; font-size: 3.5rem;">150+</h4>
-                        <p style="color: #ccc; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Active Dealers</p>
-                    </div>
-                    <div class="dealer-stat-box">
-                        <h4 class="text-red" style="font-family: 'Bebas Neue', cursive; font-size: 3.5rem;">25+</h4>
-                        <p style="color: #ccc; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">States Covered</p>
-                    </div>
-                    <div class="dealer-stat-box">
-                        <h4 class="text-red" style="font-family: 'Bebas Neue', cursive; font-size: 3.5rem;">50+</h4>
-                        <p style="color: #ccc; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Major Cities</p>
-                    </div>
-                    <div class="dealer-stat-box">
-                        <h4 class="text-red" style="font-family: 'Bebas Neue', cursive; font-size: 3.5rem;">100%</h4>
-                        <p style="color: #ccc; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Certified Gear</p>
-                    </div>
+                <div class="state-filter-wrap">
+                    <label for="stateFilter">Filter by State</label>
+                    <select id="stateFilter" aria-label="Filter dealers by state">
+                        <option value="all">All States</option>
+                    </select>
                 </div>
+            </div>
+
+            <div id="alpinestars-panel" class="brand-panel active" data-panel="alpinestars" role="tabpanel">
+                <div class="dealer-list-grid">
+                    <article class="dealer-card" data-state="Assam">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Comrades Pitstop</h3>
+                        <p class="dealer-city">Guwahati</p>
+                        <p class="dealer-address">Matu Commercial Complex, Near H.P. Petrol Pump, VIP Road, Sachal Path, Guwahati, Assam 781036</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/HMQhNECagnZAcvcm9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/comradespitstop/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>6KIOM / Skyler Corp.</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">10/2, 1st Floor, Khivraj Mansions, Kasturba Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/pxJWimjmCBE1HdRu8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/6kiom/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Autonity</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">XH5J+8P2, 1st Main Rd, Kalasipalyam New Extension, Kalasipalya, Bengaluru, Karnataka 560002</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/e27mRmrJa9wsjTYx8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/autonity.in" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>House of Machines</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">M29, Bellary Rd, next to Triumph North, Gangenahalli, Dena Bank Colony, Ganganagar, Bengaluru, Karnataka 560032</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/iXxyX4YRg814TZKs8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/h.o.m_india/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>House of Machines</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">84, opposite MTR Restaurant, Doddamavalli, Sudhama Nagar, Bengaluru, Karnataka 560002</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/nwAuyehzRPSwcYN49" target="_blank" rel="noreferrer">Map</a>
+                            <span class="plain-link">Instagram unavailable</span>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Orion Motors Riding Store</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">1st Floor, 518, Hosur Rd, above Orion Suzuki Showroom, opposite The Forum, Tavarekere, Bhoovanappa Layout, Koramangala, Bengaluru, Karnataka 560030</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/P3hfMbovjjzZYxNp9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/orionmotorsridingstore/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Race Nation / Skanda Automotive</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">91/8 27th "C" cross, 14th Main Rd, 4th T Block East, Jayanagar, Bengaluru, Karnataka 560011</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/sckmwe7ixwQs6edT9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/racenation_official/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Delhi">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Redline Racing Store</h3>
+                        <p class="dealer-city">Delhi</p>
+                        <p class="dealer-address">First Floor, A-21/19, Block A, Naraina Industrial Area Phase 2, Naraina, Delhi, 110028</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/4eio4cgWrZpQ4gDz9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/redlineracingstore/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Telangana">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>1Down 5Up</h3>
+                        <p class="dealer-city">Hyderabad</p>
+                        <p class="dealer-address">1-100/LE/15 Aliens Valley Diamond Heights Layout Gopanapalle, Nallagandla, Hyderabad, Telangana 500046</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/LxuZFSC1CgP2EQVx5" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/one.down5up" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Telangana">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Dynamic Ryderz</h3>
+                        <p class="dealer-city">Hyderabad</p>
+                        <p class="dealer-address">Road no 10, Pavani Equinox, Road Number 10, Sravanthi Nagar, ICRISAT Colony, Jubilee Hills, Hyderabad, Telangana 500033</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/BRyBZwCn4WKXMcUd8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/dynamicryderz/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Rajasthan">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Helmet Point</h3>
+                        <p class="dealer-city">Jaipur</p>
+                        <p class="dealer-address">B 11 Murtikala Colony, Gopalpura Bypass Rd, Jaipur, Rajasthan 302018</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/BdFsHf3oEUR6RvDW8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/bikersdestinationhelmetpoint/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Maharashtra">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Bikester Global</h3>
+                        <p class="dealer-city">Mumbai</p>
+                        <p class="dealer-address">Shop no 4, Shakti Textile, Chincholi Bunder Rd, next to TATA Motors, Malad West, Mumbai- 400064</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/8R7ZkvzG1zaAZmkHA" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/bikesterglobal/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Maharashtra">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Super Moto Outfits</h3>
+                        <p class="dealer-city">Mumbai</p>
+                        <p class="dealer-address">Shop No 17, Parmanand Building, Next to Mama Mia Restaurant, Gamdevi, Mumbai 400007.</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/AgvKDTfZCMnb6yxa7" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/super_moto_outfits/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Maharashtra">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Moto Central / Kapil Agencies</h3>
+                        <p class="dealer-city">Pune</p>
+                        <p class="dealer-address">Navlakha Chambers, 346, Jamlbhai Patel path, New Nana Peth, Ganesh Peth, Pune, Maharashtra 411002</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/mU7Q5i5yWCWSMjS78" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/motocentralindia/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Meghalaya">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Throttle Culture</h3>
+                        <p class="dealer-city">Shillong</p>
+                        <p class="dealer-address">Beside Frank Yamaha Showroom, Keating Road, Shillong, Meghalaya - 793001. India</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/CS3k4LCAcqi8W8LY7" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/throttle_culture1926/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="West Bengal">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Motovault Gears</h3>
+                        <p class="dealer-city">Kolkata</p>
+                        <p class="dealer-address">28B, Bakultala Ln, New Ballygunge, Kasba, Kolkata, West Bengal 700042</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/zktZ47zDa2pLdUuN9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/motovaultgears/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Motodrift</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">#1677, 27th Main, 22nd Cross Rd, behind KLM Fashion Mall, 2nd Sector, Sector 2, HSR Layout, Bengaluru, Karnataka 560102</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/j3xN2wa5jBSqBVi38" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/motodrift.co/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Kerala">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Corsagram</h3>
+                        <p class="dealer-city">Kochi</p>
+                        <p class="dealer-address">MGC Plaza, 52/3317, NH 47, near Church Road, Thykoodam, Vyttila, Kochi, Ernakulam, Kerala 682019</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/AuntxgPhc8Sniov46" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/corsagram/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Kerala">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Jeron Helmets 2.0</h3>
+                        <p class="dealer-city">Kottayam</p>
+                        <p class="dealer-address">T.B Road, MC Rd, opposite PWD rest house, Kottayam, Kerala 686001</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/CuRQhCc1kobpL15o6" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/jeron.helmets/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Kerala">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Flying Eagle Motorcycle Hub</h3>
+                        <p class="dealer-city">Thiruvananthapuram</p>
+                        <p class="dealer-address">Venpalavattom, P. Oa, Anayara, Thiruvananthapuram, Kerala 695029</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/4hqWwJEnmBTr3Drt8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/flyingeagle.motohub/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Maharashtra">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Road Runnerz</h3>
+                        <p class="dealer-city">Pune</p>
+                        <p class="dealer-address">Chondhe Patil Rd, Vishal Nagar, Pimple Nilakh, Pimpri-Chinchwad, Pune, Maharashtra 411027</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/iPQQAxkJLWEyHo9H7" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/roadrunnerzindia/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Assam">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Bikerdroid</h3>
+                        <p class="dealer-city">Guwahati</p>
+                        <p class="dealer-address">N.H 27, near Nidhi Bhavan, Borsojai, Lalmati, Guwahati, Assam 781029</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/xS6vTNDnxRouu9D56" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/biker_droid/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="West Bengal">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Bikerzz</h3>
+                        <p class="dealer-city">Kolkata</p>
+                        <p class="dealer-address">174, Acharya Prafulla Chandra Rd, Hati Bagan, Shyam Bazar, Kolkata, West Bengal 700004</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/eAShys1zD5xjt8ot9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/bikerzz.official/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Uttarakhand">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Piston Crew</h3>
+                        <p class="dealer-city">Dehradun</p>
+                        <p class="dealer-address">3/4, Rajpur Rd, near Clock tower, Patel Market, Race Course, Dehradun, Uttarakhand 248001</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/XEF41hiE3kXkcMyP9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/crewpiston/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Karnataka">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Motodrift Indiranagar</h3>
+                        <p class="dealer-city">Bengaluru</p>
+                        <p class="dealer-address">620, 2nd Main Rd, Indira Nagar 1st Stage, Stage 1, Indiranagar, Bengaluru, Karnataka 560038</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/5Tzt5qzhFVQMzrMD9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/motodrift.co/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Kerala">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>The Helmet World</h3>
+                        <p class="dealer-city">Thiruvananthapuram</p>
+                        <p class="dealer-address">Jawahar Nagar, Sasthamangalam, Thiruvananthapuram, Keralam 695003</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/uJXV7V8PLrjBHoMU8" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/thehelmet_world/" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+
+                    <article class="dealer-card" data-state="Kerala">
+                        <div class="dealer-badges"><span class="brand-tag alpinestars">Alpinestars</span></div>
+                        <h3>Bandido's Pitstop</h3>
+                        <p class="dealer-city">Thrissur</p>
+                        <p class="dealer-address">30/482/2, Premji Rd, near SIB, Punkunnam, Thrissur, Keralam 680002</p>
+                        <div class="dealer-actions">
+                            <a href="https://maps.app.goo.gl/EnM1ymBFnBgdNygy9" target="_blank" rel="noreferrer">Map</a>
+                            <a href="https://www.instagram.com/bandidos_pitstop/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="kyt-panel" class="brand-panel" data-panel="kyt" role="tabpanel" hidden>
+                <div class="dealer-list-grid" id="kyt-dealer-grid"></div>
             </div>
         </div>
     </section>
 
-    <!-- Black Background Call To Action -->
-    <section class="dark-section reveal" style="background-color: #050505; text-align: center; padding: 6rem 1rem;">
-        <div class="container">
-            <h2 class="heading-xl text-white">Partner With Us</h2>
-            <p style="color: #aaa; font-size: 1.2rem; margin: 1rem auto 3rem; max-width: 600px;">Join India's fastest-growing premium motorcycle gear distribution network. Provide your customers with globally certified products.</p>
-            <a href="contact.html" class="btn btn-primary" style="padding: 1.2rem 3rem;">Become a Dealer</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <div id="footer-placeholder"></div>
 
     <script src="script.js"></script>

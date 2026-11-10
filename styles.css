@@ -1485,3 +1485,308 @@ textarea.form-control {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 }
+
+/* Combined Brand Dealer Page Styles */
+.brand-logo-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.brand-logo {
+  max-height: 64px;
+  width: auto;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
+.brand-logo-white {
+  max-height: 52px;
+}
+
+.brand-logo-kyt {
+  max-height: 54px;
+}
+
+.brand-dealer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.brand-dealer-header .section-title {
+  width: 100%;
+}
+
+.dealer-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dealer-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dealer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.08);
+}
+
+.dealer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.brand-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-tag.alpinestars {
+  background: rgba(17, 17, 17, 0.95);
+  color: #fff;
+}
+
+.brand-tag.kyt {
+  background: rgba(225, 6, 0, 0.1);
+  color: var(--racing-red);
+}
+
+.dealer-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--matte-black);
+}
+
+.dealer-city {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--racing-red);
+}
+
+.dealer-address {
+  color: var(--grey-text);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.dealer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.dealer-actions a,
+.plain-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.04);
+  color: var(--matte-black);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dealer-actions a:hover {
+  background: var(--racing-red);
+  color: #fff;
+}
+
+.plain-link {
+  opacity: 0.7;
+}
+
+.brand-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.brand-tab-list {
+  display: inline-flex;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.35rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+}
+
+.brand-tab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--matte-black);
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.brand-tab.active {
+  background: var(--matte-black);
+  color: #fff;
+}
+
+.state-filter-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.state-filter-wrap label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+
+.state-filter-wrap select {
+  min-width: 190px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fafafa;
+  color: var(--matte-black);
+  font-size: 1rem;
+}
+
+.brand-panel {
+  display: none;
+}
+
+.brand-panel.active {
+  display: block;
+}
+
+.coming-soon-box {
+  background: linear-gradient(135deg, rgba(17,17,17,0.97), rgba(36,36,36,0.95));
+  color: #fff;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.coming-soon-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-box h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.coming-soon-box p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.8;
+}
+
+.coming-soon-states {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.coming-soon-states span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hidden-dealer {
+  display: none !important;
+}
+
+.no-dealers-message {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(225, 6, 0, 0.05);
+  border: 1px solid rgba(225, 6, 0, 0.12);
+  color: var(--matte-black);
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .brand-filter-bar {
+    align-items: flex-start;
+  }
+
+  .brand-tab-list {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-tab {
+    flex: 1;
+  }
+
+  .state-filter-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .state-filter-wrap select {
+    flex: 1;
+    min-width: 0;
+  }
+}
